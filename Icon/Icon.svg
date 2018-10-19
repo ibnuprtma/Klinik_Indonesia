@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.536 61.215">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #327d5b;
+      }
+
+      .cls-1 {
+        stroke: rgba(0,0,0,0);
+      }
+
+      .cls-2, .cls-4 {
+        fill: #00cd70;
+      }
+
+      .cls-2 {
+        font-size: 22px;
+        font-family: TrebuchetMS-Bold, Trebuchet MS;
+        font-weight: 700;
+        letter-spacing: 0.128em;
+      }
+
+      .cls-5 {
+        fill: #fff;
+        stroke: #707070;
+      }
+
+      .cls-6 {
+        stroke: none;
+      }
+
+      .cls-7 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_49" data-name="Group 49" transform="translate(-75.464 -41.785)">
+    <path id="Intersection_1" data-name="Intersection 1" class="cls-1" transform="translate(115 73)"/>
+    <text id="KLINIK_INDONESIA" data-name="KLINIK
+INDONESIA" class="cls-2" transform="translate(75.568 62.785)"><tspan x="0" y="0">KLINIK</tspan><tspan class="cls-3"><tspan x="0" y="29">INDONESIA</tspan></tspan></text>
+    <rect id="Rectangle_62" data-name="Rectangle 62" class="cls-4" width="86.683" height="1.265" rx="0.633" transform="translate(75.464 68.71)"/>
+    <g id="Rectangle_63" data-name="Rectangle 63" class="cls-5" transform="translate(238 97)">
+      <rect class="cls-6" width="2" height="6"/>
+      <rect class="cls-7" x="0.5" y="0.5" width="1" height="5"/>
+    </g>
+  </g>
+</svg>
