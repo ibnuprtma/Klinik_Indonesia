@@ -8,7 +8,7 @@ if(isset($_POST["submit"])){
 
         echo "<script>
     
-        swal2(
+        swal(
                 'Good job!',
                 'You clicked the button!',
                 'success'
@@ -44,8 +44,8 @@ if(isset($_POST["submit"])){
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Js/sweetalert2.css">
-    <script scr="Js/sweetalert2.min.js"></script>
+    <script src="/Js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="/Js/sweetalert2.min.css">
 
     <title>Klinik Indonesia</title>
   </head>
