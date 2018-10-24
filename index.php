@@ -1,37 +1,60 @@
+
 <?php 
 
 require 'function.php';
 
-
-if(isset($_POST["submit"])){
-    if(tambah($_POST) > 0){
-
-        echo "<script>
-    
-        swal(
-                'Good job!',
-                'You clicked the button!',
-                'success'
-        );
-            
-       </script>";
-
-    }else{
-        echo "
-        <script>
-            swal({
-                type: 'error',
-                title: 'Oops...',
-                text: 'Something went wrong!',
-                footer: '<a href>Why do I have this issue?</a>'
-            });
+if(isset($_POST["submitp"])){
+    if(tambahP($_POST) > 0){
+        echo  
+        "<script> 
+        alert('Anda Berhasil Memasukan Data');
+        document.location.href='index.php';
         </script>";
+    }else{
+        echo  "<script> alert('Anda Memasukan Data Gagal') </script>";
     }
-
 }
 
 
 ?>
+
+<?php 
+
+if(isset($_POST["submitd"])){
+    if(tambahD($_POST) > 0){
+        echo  
+        "<script> 
+        alert('Anda Berhasil Memasukan Data');
+        document.location.href='index.php';
+        </script>";
+    }else{
+        echo  "<script> alert('Anda Memasukan Data Gagal') </script>";
+    }
+}
+
+?>
+
+
+
+<script>
+
+    function validation(){
+        
+        var name=document.getElementById('Nm_lngkp').value;
+        var alamat=document.getElementById('Alamat').value;
+        var tgllahir=document.getElementById('example-date-input').value;
+        
+        swal(
+                        'Good job!',
+                        'You clicked the button!',
+                        'success'
+                    )
+        
+        document.location.href ='index.php'
+        
+    }
+
+</script>
 
 
 <!doctype html>
@@ -44,8 +67,10 @@ if(isset($_POST["submit"])){
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="/Js/sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="/Js/sweetalert2.min.css">
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="Js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="Js/sweetalert2.min.css">
 
     <title>Klinik Indonesia</title>
   </head>
@@ -78,18 +103,18 @@ if(isset($_POST["submit"])){
 
                                         <div class="form-group">
                                             <label for="Nm_lngkp" class="ml-1">Nama Lengkap</label>
-                                            <input type="text" class="form-control" name ="nama" id="Nm_lngkp" placeholder="Masukan Nama lengkap..">
+                                            <input type="text" class="form-control" name ="nama" id="Nm_lngkp" placeholder="Masukan Nama lengkap.." required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="Alamat" class="ml-1">Alamat</label>
-                                            <input type="text" class="form-control" id="Alamat" name="alamat" placeholder="Masukan alamat">
+                                            <input type="text" class="form-control" id="Alamat" name="alamat" placeholder="Masukan alamat" required>
                                         </div>
                                         
-                                        <div class="form-group">
+                                        <div class="form-group" required>
                                             <label for="" class="ml-1">Jenis Kelamin</label><br>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="rJK" id="lk" value="Laki-Laki">
+                                                <input class="form-check-input" type="radio" name="rJK" id="lk" value="Laki-Laki" required>
                                                 <label class="form-check-label" for="lk">Laki-Laki</label>
                                             </div>
                                             <div class="form-check form-check-inline">
@@ -101,7 +126,7 @@ if(isset($_POST["submit"])){
                                         <div class="form-group">
                                             <label for="" class="ml-1">Golongan Darah</label><br>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="rGD" id="A" value="A">
+                                                <input class="form-check-input" type="radio" name="rGD" id="A" value="A" required>
                                                 <label class="form-check-label" for="A">A</label>
                                             </div>
                                             <div class="form-check form-check-inline">
@@ -132,7 +157,7 @@ if(isset($_POST["submit"])){
                                             
                                             
                                        
-                                                <button type="submit" class="btn btn-success btn-dfr" name="submit">Selesai</button>
+                                                <button type="submit" class="btn btn-success btn-dfr" name="submitp" disable>Selesai</button>
                                         
 
                                         </center>
@@ -154,18 +179,18 @@ if(isset($_POST["submit"])){
 
                                         <div class="form-group">
                                             <label for="Nm_lngkp" class="ml-1">Nama Lengkap</label>
-                                            <input type="text" class="form-control" id="Nm_lngkp" name ="nama" placeholder="Masukan Nama lengkap..">
+                                            <input type="text" class="form-control" id="Nm_lngkp" name ="nama" placeholder="Masukan Nama lengkap.." required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="Alamat" class="ml-1">Alamat</label>
-                                            <input type="text" class="form-control" id="Alamat" name="alamat" placeholder="Masukan alamat">
+                                            <input type="text" class="form-control" id="Alamat" name="alamat" placeholder="Masukan alamat" required>
                                         </div>
                                         
                                         <div class="form-group">
                                             <label for="" class="ml-1">Jenis Kelamin</label><br>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="rJK" id="lk" value="Laki-Laki">
+                                                <input class="form-check-input" type="radio" name="rJK" id="lk" value="Laki-Laki" required>
                                                 <label class="form-check-label" for="lk">Laki-Laki</label>
                                             </div>
                                             <div class="form-check form-check-inline">
@@ -177,13 +202,13 @@ if(isset($_POST["submit"])){
 
                                          <div class="form-group">
                                             <label for="Spesialis" class="ml-1">Spesialis</label>
-                                            <input type="text" class="form-control" name="spesialis" id="Spesialis" placeholder="Masukan Spesialis">
+                                            <input type="text" class="form-control" name="spesialis" id="Spesialis" placeholder="Masukan Spesialis" required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="" class="ml-1">Golongan Darah</label><br>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="rGD" id="A" value="A">
+                                                <input class="form-check-input" type="radio" name="rGD" id="A" value="A" required>
                                                 <label class="form-check-label" for="A">A</label>
                                             </div>
                                             <div class="form-check form-check-inline">
@@ -214,7 +239,7 @@ if(isset($_POST["submit"])){
                                           
                                             
                                             
-                                                <button type="submit" class="btn btn-success btn-dfr" name ="submit"> Selesai</button>
+                                                <button type="submit" class="btn btn-success btn-dfr" name ="submitd"> Selesai</button>
                                            
 
                                         </center>
