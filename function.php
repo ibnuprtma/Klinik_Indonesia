@@ -12,7 +12,7 @@
         return $rows;
     }
 
-    function tambah($dataP){
+    function tambahP($dataP){
         global $conn;
 
                 
@@ -43,6 +43,37 @@
         mysqli_query($conn, $query);
         return mysqli_affected_rows($conn);
     }
+
+    function tambahD($dataD){
+        global $conn;
+
+        $digits = 3;
+
+        $kd_dok = rand(pow(10, $digits-1), pow(10, $digits)-1);
+        $nm_dok = $dataD["nama"];
+        $almt_dok = $dataD["alamat"];
+        $jkel_dok = $dataD["rJK"];
+        $spesialis_dok = $dataD["spesialis"];
+        $darah_dok = $dataD["rGD"];
+        $lhr_dok = $dataD["Tanggal-Lahir"];
+
+        $query = "INSERT INTO DOKTER
+                    VALUES
+                (
+                '$kd_dok',
+                '$nm_dok',
+                '$almt_dok',
+                '$jkel_dok',
+                '$spesialis_dok',
+                '$darah_dok',
+                '$lhr_dok'
+                )";
+
+        mysqli_query($conn, $query);
+        return mysqli_affected_rows($conn);
+    }
+
+
 
 
 ?>
