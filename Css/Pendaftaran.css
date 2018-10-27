@@ -1,0 +1,52 @@
+body{
+    height: 700px;
+}
+
+.icon{
+    width: 180px;
+    height: 80px;
+    padding: 20px;
+    margin-left: 3%;
+}
+
+.gambar{
+    width: 459px;
+    height: 340px;
+    background-image: url('../Img/1.svg');
+    margin-left: 10%;
+    margin-top: 6%; 
+    position: relative;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: Tahoma;
+    letter-spacing: 10px;
+    font-weight: bold;
+    color: #008751;
+}
+
+p{
+    text-align: center;
+}
+
+.btn-dfr{
+    background: #F2FFF8;
+    -webkit-box-shadow: 1px 4px 17px -5px rgba(184,184,184,1);
+    -moz-box-shadow: 1px 4px 17px -5px rgba(184,184,184,1);
+    box-shadow: 1px 4px 17px -5px rgba(184,184,184,1);
+    color: #008751;
+    border: none;
+    letter-spacing: 3px;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.mdlcont{
+    max-height: 700vh;
+    border-radius: 50px;
+}
+
+
